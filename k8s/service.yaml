@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-first-own-services
+spec:
+  selector:
+    app: go-web-app #make sure your Service has a selector that matches the pod’s label
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080 #make sure container port should be enter here
+  type: ClusterIP

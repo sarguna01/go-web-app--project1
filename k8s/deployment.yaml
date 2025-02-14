@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-first-own-project
+  name: my-first-own-deployment
   labels:
     app: go-web-app
 spec:
@@ -18,4 +18,4 @@ spec:
       - name: go-web-app
         image: pandiyan0/sarguna:v1 #docker-username/repo namego-web-app:1.14.2
         ports:
-        - containerPort: 8080
+        - containerPort: 8080 #mention what port has exposed in the docker file 
